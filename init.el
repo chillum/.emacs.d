@@ -31,7 +31,8 @@
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
-;; TODO: rake, cap
+(global-set-key "\C-cr" 'rinari-rake)
+(global-set-key "\C-cd" 'rinari-cap)
 (add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
