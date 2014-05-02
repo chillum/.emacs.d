@@ -7,7 +7,7 @@
  '(blink-cursor-mode nil)
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))))
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(default-frame-alist (quote ((height . 32) (width . 110))))
+ '(default-frame-alist (quote ((height . 36) (width . 110))))
  '(default-input-method "russian-computer")
  '(icomplete-mode t)
  '(ido-mode (quote both) nil (ido))
@@ -23,7 +23,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 107 :width normal :foundry "outline" :family "Consolas")))))
+ '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 137 :width normal :foundry "outline" :family "Menlo")))))
 (fset 'yes-or-no-p 'y-or-n-p)
 (eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
 (eval-after-load 'yasnippet-autoloads '(yas-global-mode t))
