@@ -17,8 +17,7 @@ License: public domain
 * js2-mode
 * coffee-mode
 * apache-mode
-* erlang
-* d-mode
+* cider
 * scala-mode2
-* csharp-mode
+* erlang
 * csv-mode
