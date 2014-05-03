@@ -8,9 +8,6 @@ License: public domain
 * magit
 * psvn
 * org
-* go-mode
-* d-mode
-* erlang
 * markdown-mode
 * yaml-mode
 * puppet-mode
@@ -19,6 +16,9 @@ License: public domain
 * apache-mode
 * js2-mode
 * coffee-mode
+* go-mode
+* d-mode
+* erlang
 * cider
 * scala-mode2
 * csv-mode
