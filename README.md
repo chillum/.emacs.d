@@ -19,7 +19,4 @@ License: public domain
 * coffee-mode
 * go-mode
 * d-mode
-* erlang
-* cider
-* scala-mode2
 * csv-mode
