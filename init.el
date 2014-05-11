@@ -7,7 +7,7 @@
  '(blink-cursor-mode nil)
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))))
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(default-frame-alist (quote ((height . 36) (width . 110))))
+ '(default-frame-alist (quote ((height . 36) (width . 110) (top . 180) (left . 300))))
  '(default-input-method "russian-computer")
  '(icomplete-mode t)
  '(ido-mode (quote both) nil (ido))

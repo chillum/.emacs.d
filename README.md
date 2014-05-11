@@ -8,15 +8,13 @@ License: public domain
 * dash-at-point
 * magit
 * psvn
-* org
 * markdown-mode
 * yaml-mode
+* json-mode
 * puppet-mode
+* inf-ruby
 * rinari
 * web-mode
 * apache-mode
-* js2-mode
-* coffee-mode
 * go-mode
-* d-mode
 * csv-mode
