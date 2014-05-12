@@ -35,7 +35,7 @@
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cr" 'rinari-rake)
 (global-set-key "\C-cc" 'rinari-cap)
-(global-set-key "\C-cd" 'dash-at-point)
+(eval-after-load 'dash-at-point-autoloads '(global-set-key "\C-cd" 'dash-at-point))
 (add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (eval-after-load 'markdown-mode-autoloads '(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
