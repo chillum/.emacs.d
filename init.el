@@ -14,6 +14,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
+ '(markdown-command "kramdown --template=document --no-auto-ids --line-width=100")
  '(package-archives (quote (("melpa" . "http://melpa.milkbox.net/packages/") ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(show-paren-mode t)
  '(tab-width 4)
