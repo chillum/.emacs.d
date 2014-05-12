@@ -44,7 +44,6 @@
 (add-to-list 'auto-mode-alist '("[Pp]rocfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Cc]apfile\\'" . ruby-mode))
 (fset 'perl-mode 'cperl-mode)
-(fset 'javascript-mode 'js2-mode)
 (fset 'html-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.\\(tpl\\|php\\|phtml\\)\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
