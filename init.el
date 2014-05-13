@@ -10,6 +10,7 @@
  '(default-frame-alist (quote ((height . 36) (width . 110) (top . 180) (left . 345))))
  '(default-input-method "russian-computer")
  '(icomplete-mode t)
+ '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -25,7 +26,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 137 :width normal :foundry "outline" :family "Menlo")))))
+ '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "outline" :family "Menlo")))))
 (fset 'yes-or-no-p 'y-or-n-p)
 (eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
 (eval-after-load 'yasnippet-autoloads '(yas-global-mode t))
