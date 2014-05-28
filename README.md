@@ -19,6 +19,7 @@ License: public domain
 * apache-mode
 * go-mode
 * d-mode
+* groovy-mode
 * mvn
 * cmake-mode
 * vagrant
