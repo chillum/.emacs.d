@@ -18,5 +18,8 @@ License: public domain
 * web-mode
 * apache-mode
 * go-mode
+* d-mode
+* mvn
+* cmake-mode
 * vagrant
 * csv-mode

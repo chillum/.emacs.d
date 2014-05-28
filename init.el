@@ -7,7 +7,7 @@
  '(blink-cursor-mode nil)
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))))
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(dash-at-point-mode-alist (quote ((web-mode . "php,html,css,javascript,jquery") (javascript-mode . "javascript,jquery") (css-mode . "css") (markdown-mode . "markdown") (gfm-mode . "markdown") (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet") (ruby-mode . "chef,vagrant,ruby") (yaml-mode . "ansible,chef") (json-mode . "chef") (go-mode . "go"))))
+ '(dash-at-point-mode-alist (quote ((web-mode . "php,html,css,javascript,jquery") (javascript-mode . "javascript,jquery") (css-mode . "css") (markdown-mode . "markdown") (gfm-mode . "markdown") (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet") (ruby-mode . "chef,vagrant,ruby") (yaml-mode . "ansible,chef") (json-mode . "chef") (go-mode . "go")  (cmake-mode . "cmake"))))
  '(default-frame-alist (quote ((height . 36) (width . 110) (top . 180) (left . 345))))
  '(default-input-method "russian-computer")
  '(eshell-hist-ignoredups t)
