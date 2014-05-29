@@ -35,6 +35,7 @@
 (eval-after-load 'rinari-autoloads '(require 'rinari))
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
 (add-to-list 'auto-mode-alist '("[Gg]emfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Rr]akefile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Pp]rocfile\\'" . ruby-mode))
