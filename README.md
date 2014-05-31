@@ -19,6 +19,7 @@ License: public domain
 * apache-mode
 * go-mode
 * d-mode
+* cider
 * scala-mode
 * sbt-mode
 * groovy-mode
