@@ -45,6 +45,7 @@
 (add-to-list 'auto-mode-alist '("Berksfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Thorfile\\'" . ruby-mode))
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
+(global-set-key "\C-ca" 'calculator)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cr" 'rinari-rake)
