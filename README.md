@@ -17,14 +17,9 @@ License: public domain
 * rinari
 * web-mode
 * apache-mode
-* d-mode
 * go-mode
-* erlang-mode
 * cider
-* scala-mode
-* sbt-mode
 * groovy-mode
-* mvn
 * cmake-mode
 * vagrant
 * csv-mode
