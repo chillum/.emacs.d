@@ -33,7 +33,6 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "outline" :family "Menlo")))))
 (eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
-(eval-after-load 'yasnippet-autoloads '(yas-global-mode t))
 (eval-after-load 'rinari-autoloads '(require 'rinari))
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
