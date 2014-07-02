@@ -18,7 +18,5 @@ License: public domain
 * apache-mode
 * go-mode
 * cider
-* groovy-mode
-* cmake-mode
 * vagrant
 * csv-mode
