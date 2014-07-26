@@ -14,6 +14,7 @@ License: public domain
 * puppet-mode
 * inf-ruby
 * rinari
+* php-mode
 * web-mode
 * apache-mode
 * go-mode
