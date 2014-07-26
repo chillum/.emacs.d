@@ -40,6 +40,8 @@
 (add-to-list 'auto-mode-alist '("\\.service\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.socket\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.target\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Gg]emfile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Rr]akefile\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("[Pp]rocfile\\'" . ruby-mode))
