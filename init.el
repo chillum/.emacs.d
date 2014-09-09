@@ -8,7 +8,7 @@
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))))
  '(cider-repl-use-clojure-font-lock t)
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(dash-at-point-mode-alist (quote ((web-mode . "html,css,javascript,jquery") (php-mode . "php,html,css,javascript,jquery") (css-mode . "css") (markdown-mode . "markdown") (gfm-mode . "markdown") (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet") (inf-ruby-mode . "ruby") (ruby-mode . "chef,vagrant,ruby") (yaml-mode . "ansible,chef") (js-mode . "chef") (js2-mode . "javascript,jquery") (erlang-shell-mode . "erl") (erlang-mode . "erl") (go-mode . "go") (tcl-mode . "tcl") (inferior-tcl-mode . "tcl") (cmake-mode . "cmake") (groovy-mode . "groovy") (cider-repl-mode . "clojure") (clojure-mode . "clojure") (scala-mode . "scala") (sql-mode . "mysql,psql"))))
+ '(dash-at-point-mode-alist (quote ((go-mode . "go") (cider-repl-mode . "clojure") (clojure-mode . "clojure") (java-mode . "java") (js2-mode . "javascript,jquery") (web-mode . "html,css,javascript,jquery") (php-mode . "php,html,css,javascript,jquery") (css-mode . "css") (apache-mode . "apache") (nginx-mode . "nginx") (inf-ruby-mode . "ruby") (ruby-mode . "chef,vagrant,ruby") (yaml-mode . "ansible,chef") (js-mode . "chef") (puppet-mode . "puppet") (sql-mode . "mysql,psql"))))
  '(default-frame-alist (quote ((height . 36) (width . 110) (top . 180) (left . 345))))
  '(default-input-method "russian-computer")
  '(eshell-hist-ignoredups t)
