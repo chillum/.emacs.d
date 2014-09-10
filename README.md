@@ -18,7 +18,6 @@ License: public domain
 * js2-mode
 * apache-mode
 * go-mode
-* cider
 * dockerfile-mode
 * vagrant
 * csv-mode
