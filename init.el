@@ -18,6 +18,7 @@
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-global-externs (quote ("require" "process")))
  '(make-backup-files nil)
