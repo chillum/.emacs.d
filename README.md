@@ -5,7 +5,6 @@ License: public domain
 
 ### Packages
 * color-theme-solarized
-* dash-at-point
 * magit
 * psvn
 * markdown-mode
