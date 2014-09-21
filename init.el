@@ -8,7 +8,7 @@
  '(c-default-style (quote ((java-mode . "java") (awk-mode . "awk") (other . "stroustrup"))))
  '(cider-repl-use-clojure-font-lock t)
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(dash-at-point-mode-alist (quote ((go-mode . "go") (js2-mode . "javascript,jquery") (web-mode . "html,css,javascript,jquery") (php-mode . "php,html,css,javascript,jquery") (css-mode . "css") (apache-mode . "apache") (nginx-mode . "nginx") (inf-ruby-mode . "ruby") (ruby-mode . "chef,vagrant,ruby") (yaml-mode . "ansible,chef") (js-mode . "chef") (puppet-mode . "puppet") (sql-mode . "mysql,psql"))))
+ '(dash-at-point-mode-alist (quote ((cider-repl-mode . "clojure") (clojure-mode . "clojure") (go-mode . "go") (js2-mode . "javascript,jquery") (web-mode . "html,css,javascript,jquery") (php-mode . "php,html,css,javascript,jquery") (css-mode . "css") (apache-mode . "apache") (nginx-mode . "nginx") (inf-ruby-mode . "ruby") (ruby-mode . "chef,vagrant,ruby") (yaml-mode . "ansible,chef") (js-mode . "chef") (puppet-mode . "puppet") (sql-mode . "mysql,psql"))))
  '(default-frame-alist (quote ((height . 53) (width . 120) (top . 50) (left . 380))))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
