@@ -12,10 +12,11 @@ License: public domain
 * puppet-mode
 * inf-ruby
 * rinari
-* php-mode
 * web-mode
-* js2-mode
+* php-mode
 * apache-mode
+* nginx-mode
+* js2-mode
 * go-mode
 * dockerfile-mode
 * vagrant
