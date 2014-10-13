@@ -62,6 +62,7 @@
 (add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (eval-after-load 'markdown-mode-autoloads '(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
+(eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("/nginx/.*\\.conf\\'" . nginx-mode)))
 (eval-after-load 'js2-mode-autoloads '(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
 (fset 'html-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
