@@ -50,8 +50,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "outline" :family "Menlo")))))
-(eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
-(eval-after-load 'rinari-autoloads '(require 'rinari))
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -75,6 +73,8 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
+(eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
+(eval-after-load 'rinari-autoloads '(require 'rinari))
 (eval-after-load 'markdown-mode-autoloads '(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
 (eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode)))
 (eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode)))
