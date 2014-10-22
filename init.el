@@ -74,7 +74,6 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
 (eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
-(eval-after-load 'rinari-autoloads '(require 'rinari))
 (eval-after-load 'markdown-mode-autoloads '(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
 (eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode)))
 (eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode)))
