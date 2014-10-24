@@ -13,6 +13,7 @@ License: public domain
 * inf-ruby
 * rinari
 * web-mode
+* jade-mode
 * php-mode
 * apache-mode
 * nginx-mode
