@@ -10,9 +10,6 @@
     ((java-mode . "java")
      (awk-mode . "awk")
      (other . "stroustrup"))))
- '(custom-safe-themes
-   (quote
-    ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(default-frame-alist
     (quote
      ((height . 53)
@@ -50,6 +47,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "outline" :family "Menlo")))))
+(package-initialize)
+(color-theme-initialize)
+(color-theme-solarized-dark)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -74,8 +74,7 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
-(eval-after-load 'color-theme-solarized-autoloads '(load-theme 'solarized-dark t))
-(eval-after-load 'markdown-mode-autoloads '(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode)))
-(eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode)))
-(eval-after-load 'nginx-mode-autoloads '(add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode)))
-(eval-after-load 'apache-mode-autoloads '(add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode)))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+(add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode))
+(add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode))
+(add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
