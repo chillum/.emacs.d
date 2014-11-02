@@ -37,7 +37,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(server-mode t)
  '(show-paren-mode t)
- '(sql-product (quote mysql))
+ '(sql-product (quote postgres))
  '(tab-width 4)
  '(tool-bar-mode nil)
  '(visible-bell t))
