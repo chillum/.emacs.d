@@ -6,6 +6,7 @@ License: public domain
 ### Packages
 * color-theme-solarized
 * magit
+* ahg
 * psvn
 * markdown-mode
 * yaml-mode

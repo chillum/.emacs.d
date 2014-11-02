@@ -78,3 +78,4 @@
 (add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
+(require 'ahg)
