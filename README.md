@@ -8,6 +8,7 @@ License: public domain
 * magit
 * ahg
 * psvn
+* ag
 * markdown-mode
 * yaml-mode
 * puppet-mode
