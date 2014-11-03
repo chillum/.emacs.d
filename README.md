@@ -19,6 +19,7 @@ License: public domain
 * apache-mode
 * nginx-mode
 * js2-mode
+* jedi-mode
 * go-mode
 * dockerfile-mode
 * vagrant

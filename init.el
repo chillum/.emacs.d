@@ -26,6 +26,7 @@
  '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
+ '(jedi:complete-on-dot t)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
@@ -47,12 +48,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 150 :family "Menlo")))))
+ '(default ((t (:height 150 :family "Menlo"))))
+ '(popup-face ((t (:background "#eee8d5" :foreground "#586e75"))))
+ '(popup-tip-face ((t (:background "#fdf6e3" :foreground "#586e75")))))
 (package-initialize)
 (color-theme-initialize)
 (color-theme-solarized-dark)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
+(add-hook 'prog-mode-hook 'auto-complete-mode)
+(add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
