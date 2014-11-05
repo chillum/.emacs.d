@@ -23,6 +23,7 @@
  '(eshell-hist-ignoredups t)
  '(global-rinari-mode t)
  '(icomplete-mode t)
+ '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
