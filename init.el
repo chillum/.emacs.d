@@ -75,6 +75,7 @@
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (fset 'html-mode 'web-mode)
+(fset 'xml-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . web-mode))
