@@ -6,7 +6,7 @@ License: public domain
 ### Packages
 * color-theme-solarized
 * magit
-* ahg
+* monky
 * psvn
 * ag
 * markdown-mode

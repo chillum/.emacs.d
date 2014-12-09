@@ -4,7 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-start 1)
- '(ahg-global-key-prefix "h")
  '(auto-save-list-file-prefix nil)
  '(blink-cursor-mode nil)
  '(c-default-style
@@ -69,6 +68,7 @@
 (global-set-key "\C-cd" 'calendar)
 (global-set-key "\C-cg" 'ag)
 (global-set-key "\C-cm" 'magit-status)
+(global-set-key "\C-ch" 'monky-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cr" 'rinari-rake)
 (global-set-key "\C-cc" 'rinari-cap)
@@ -91,4 +91,3 @@
 (add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
-(require 'ahg)
