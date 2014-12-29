@@ -11,6 +11,7 @@
     ((java-mode . "java")
      (awk-mode . "awk")
      (other . "stroustrup"))))
+ '(css-indent-offset 2)
  '(default-frame-alist
     (quote
      ((height . 53)
@@ -41,6 +42,7 @@
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
+ '(scss-compile-at-save nil)
  '(server-mode t)
  '(show-paren-mode t)
  '(sql-product (quote postgres))
