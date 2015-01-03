@@ -58,11 +58,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:height 150 :family "Menlo"))))
- '(popup-face ((t (:background "#eee8d5" :foreground "#586e75"))))
- '(popup-tip-face ((t (:background "#fdf6e3" :foreground "#586e75")))))
+ '(popup-face ((t (:background "#073642" :foreground "#839496"))))
+ '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
+ '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
+ '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
 (package-initialize)
-(color-theme-initialize)
-(color-theme-solarized-dark)
+(load-theme 'solarized-dark t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
