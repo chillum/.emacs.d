@@ -63,6 +63,15 @@
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
 (package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+(dolist (pkg '(color-theme-sanityinc-solarized magit monky psvn
+               evil ag markdown-mode yaml-mode puppet-mode
+               inf-ruby rinari web-mode scss-mode slim-mode
+               jade-mode php-mode nginx-mode js2-mode ;; FIXME: apache-mode in MELPA is b0rked
+               jedi go-mode dockerfile-mode vagrant csv-mode))
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 (load-theme 'sanityinc-solarized-dark t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)

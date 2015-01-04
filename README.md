@@ -3,27 +3,7 @@
 Emacs config files  
 License: public domain
 
-### Packages
-* color-theme-sanityinc-solarized
-* magit
-* monky
-* psvn
-* ag
-* markdown-mode
-* yaml-mode
-* puppet-mode
-* inf-ruby
-* rinari
-* web-mode
-* scss-mode
-* slim-mode
-* jade-mode
-* php-mode
-* apache-mode
-* nginx-mode
-* js2-mode
-* jedi-mode
-* go-mode
-* dockerfile-mode
-* vagrant
-* csv-mode
+### Usage
+
+1. Clone the repo in your home directory
+2. Start Emacs :-)
