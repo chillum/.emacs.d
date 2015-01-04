@@ -4,7 +4,7 @@ Emacs config files
 License: public domain
 
 ### Packages
-* color-theme-solarized
+* color-theme-sanityinc-solarized
 * magit
 * monky
 * psvn

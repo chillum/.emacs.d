@@ -63,7 +63,7 @@
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
 (package-initialize)
-(load-theme 'solarized-dark t)
+(load-theme 'sanityinc-solarized-dark t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
