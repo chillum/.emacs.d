@@ -65,11 +65,14 @@
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
-(dolist (pkg '(color-theme-sanityinc-solarized magit monky psvn
-               evil ag markdown-mode yaml-mode puppet-mode
-               inf-ruby rinari web-mode scss-mode slim-mode
-               jade-mode php-mode nginx-mode js2-mode ;; FIXME: apache-mode in MELPA is b0rked
-               jedi go-mode dockerfile-mode vagrant csv-mode))
+(dolist (pkg '(color-theme-sanityinc-solarized
+               magit monky psvn ag
+               markdown-mode yaml-mode csv-mode
+               go-mode jedi
+               rinari js2-mode php-mode
+               web-mode slim-mode jade-mode scss-mode
+               nginx-mode ;apache-mode ;; FIXME
+               puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 (load-theme 'sanityinc-solarized-dark t)
