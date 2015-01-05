@@ -68,10 +68,9 @@
 (dolist (pkg '(color-theme-sanityinc-solarized
                magit monky psvn ag
                markdown-mode yaml-mode csv-mode
-               go-mode jedi
-               rinari js2-mode php-mode
+               go-mode jedi rinari js2-mode php-mode
                web-mode slim-mode jade-mode scss-mode
-               nginx-mode ;apache-mode ;; FIXME
+               nginx-mode apache-mode
                puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
