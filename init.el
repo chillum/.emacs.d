@@ -11,6 +11,7 @@
     ((java-mode . "java")
      (awk-mode . "awk")
      (other . "stroustrup"))))
+ '(column-number-mode t)
  '(css-indent-offset 2)
  '(default-frame-alist
     (quote
