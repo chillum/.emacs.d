@@ -6,4 +6,6 @@ License: public domain
 ### Usage
 
 1. Clone the repo in your home directory
-2. Start Emacs :-)
+2. Install `aspell` and `virtualenv`
+3. Start Emacs
+4. Run `jedi:install-server`
