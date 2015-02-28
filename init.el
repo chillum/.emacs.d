@@ -25,6 +25,7 @@
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
+ '(flycheck-completion-system (quote ido))
  '(global-rinari-mode t)
  '(icomplete-mode t)
  '(ido-everywhere t)
@@ -66,7 +67,7 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg '(color-theme-sanityinc-solarized
-               magit psvn ag
+               magit psvn ag flycheck
                markdown-mode yaml-mode csv-mode
                go-mode jedi rinari js2-mode php-mode
                web-mode jade-mode stylus-mode
@@ -77,6 +78,7 @@
 (load-theme 'sanityinc-solarized-dark t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
+(global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'text-mode-hook 'flyspell-mode)
@@ -88,6 +90,7 @@
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cr" 'rinari-rake)
 (global-set-key "\C-cc" 'rinari-cap)
+(global-set-key "\C-cp" 'flycheck-list-errors)
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
