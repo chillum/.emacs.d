@@ -26,6 +26,7 @@
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
  '(flycheck-completion-system (quote ido))
+ '(flyspell-mode-line-string " Spell")
  '(global-rinari-mode t)
  '(icomplete-mode t)
  '(ido-everywhere t)
@@ -39,8 +40,7 @@
  '(js2-include-node-externs t)
  '(magit-auto-revert-mode-lighter nil)
  '(make-backup-files nil)
- '(markdown-command
-   "kramdown --template=document --no-auto-ids --line-width=100")
+ '(markdown-command "redcarpet")
  '(package-archives
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
