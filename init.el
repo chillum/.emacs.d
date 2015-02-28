@@ -43,7 +43,6 @@
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
- '(scss-compile-at-save nil)
  '(server-mode t)
  '(show-paren-mode t)
  '(sql-product (quote postgres))
@@ -67,10 +66,10 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg '(color-theme-sanityinc-solarized
-               magit monky psvn ag
+               magit psvn ag
                markdown-mode yaml-mode csv-mode
                go-mode jedi rinari js2-mode php-mode
-               web-mode slim-mode jade-mode stylus-mode scss-mode
+               web-mode jade-mode stylus-mode
                nginx-mode apache-mode
                puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
@@ -86,7 +85,6 @@
 (global-set-key "\C-cd" 'calendar)
 (global-set-key "\C-cg" 'ag)
 (global-set-key "\C-cm" 'magit-status)
-(global-set-key "\C-ch" 'monky-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cr" 'rinari-rake)
 (global-set-key "\C-cc" 'rinari-cap)
