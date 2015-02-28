@@ -37,6 +37,7 @@
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
+ '(magit-auto-revert-mode-lighter nil)
  '(make-backup-files nil)
  '(markdown-command
    "kramdown --template=document --no-auto-ids --line-width=100")
