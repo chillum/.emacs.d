@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-start 1)
+ '(auto-save-default nil)
  '(auto-save-list-file-prefix nil)
  '(blink-cursor-mode nil)
  '(c-default-style
@@ -34,7 +35,6 @@
  '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
- '(jedi:complete-on-dot t)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
@@ -70,7 +70,7 @@
 (dolist (pkg '(color-theme-sanityinc-solarized
                magit psvn ag flycheck
                markdown-mode yaml-mode csv-mode
-               go-mode jedi rinari js2-mode php-mode
+               go-mode rinari js2-mode php-mode
                web-mode jade-mode stylus-mode
                nginx-mode apache-mode
                puppet-mode dockerfile-mode vagrant))
@@ -81,7 +81,6 @@
 (fset 'perl-mode 'cperl-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
-(add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
