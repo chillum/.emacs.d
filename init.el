@@ -89,8 +89,6 @@
 (global-set-key "\C-cd" 'calendar)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
-(global-set-key "\C-cr" 'rinari-rake)
-(global-set-key "\C-cc" 'rinari-cap)
 (global-set-key "\C-cp" 'flycheck-list-errors)
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
