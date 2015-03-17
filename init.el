@@ -45,6 +45,7 @@
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
+ '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(server-mode t)
  '(show-paren-mode t)
  '(sql-product (quote postgres))
@@ -68,7 +69,7 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg '(color-theme-sanityinc-solarized
-               magit psvn ag flycheck
+               flycheck projectile flx-ido magit psvn
                markdown-mode yaml-mode csv-mode
                go-mode rinari js2-mode php-mode
                web-mode jade-mode stylus-mode
@@ -79,13 +80,13 @@
 (load-theme 'sanityinc-solarized-dark t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
+(projectile-global-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
 (global-set-key "\C-cd" 'calendar)
-(global-set-key "\C-cg" 'ag)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cr" 'rinari-rake)
