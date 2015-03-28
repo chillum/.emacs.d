@@ -28,7 +28,6 @@
  '(eshell-hist-ignoredups t)
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
- '(global-rinari-mode t)
  '(icomplete-mode t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
@@ -71,7 +70,7 @@
 (dolist (pkg '(color-theme-sanityinc-solarized
                flycheck projectile flx-ido magit psvn
                markdown-mode yaml-mode csv-mode
-               go-mode rinari js2-mode php-mode
+               go-mode js2-mode php-mode
                web-mode jade-mode stylus-mode
                nginx-mode apache-mode
                puppet-mode dockerfile-mode vagrant))
