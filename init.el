@@ -67,8 +67,8 @@
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
-(dolist (pkg '(color-theme-sanityinc-solarized
-               flycheck projectile flx-ido magit psvn
+(dolist (pkg '(color-theme-sanityinc-solarized magit psvn
+               flycheck projectile flx-ido auto-complete
                markdown-mode yaml-mode csv-mode
                go-mode js2-mode php-mode
                web-mode jade-mode stylus-mode
