@@ -34,6 +34,7 @@
  '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
+ '(jedi:complete-on-dot t)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
@@ -70,7 +71,7 @@
 (dolist (pkg '(color-theme-sanityinc-solarized magit psvn
                flycheck projectile flx-ido auto-complete
                markdown-mode yaml-mode csv-mode
-               go-mode js2-mode php-mode
+               go-mode js2-mode jedi php-mode
                web-mode jade-mode stylus-mode
                nginx-mode apache-mode
                puppet-mode dockerfile-mode vagrant))
@@ -82,6 +83,7 @@
 (projectile-global-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
+(add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
