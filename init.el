@@ -69,7 +69,7 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg '(color-theme-sanityinc-solarized magit psvn
-               flycheck projectile flx-ido auto-complete
+               flycheck projectile ag flx-ido auto-complete
                markdown-mode yaml-mode csv-mode
                go-mode js2-mode jedi php-mode
                web-mode jade-mode stylus-mode
