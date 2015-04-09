@@ -65,6 +65,7 @@
  '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
+(setq apache-indent-level 2)
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
