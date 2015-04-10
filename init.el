@@ -71,7 +71,7 @@
   (package-refresh-contents))
 (dolist (pkg '(color-theme-sanityinc-solarized magit psvn
                flycheck projectile ag flx-ido auto-complete
-               markdown-mode yaml-mode csv-mode
+               markdown-mode yaml-mode json-mode csv-mode
                go-mode js2-mode jedi php-mode
                web-mode jade-mode stylus-mode
                nginx-mode apache-mode
@@ -96,7 +96,7 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(fset 'js-mode 'js2-mode)
 (fset 'html-mode 'web-mode)
 (fset 'xml-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
