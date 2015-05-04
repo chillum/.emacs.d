@@ -69,19 +69,21 @@
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
-(dolist (pkg '(color-theme-sanityinc-solarized magit psvn
-               flycheck projectile ag flx-ido auto-complete
-               markdown-mode yaml-mode json-mode csv-mode
-               go-mode js2-mode jedi php-mode
-               web-mode jade-mode stylus-mode
-               nginx-mode apache-mode
-               puppet-mode dockerfile-mode vagrant))
+(dolist (pkg
+         '(color-theme-sanityinc-solarized magit psvn
+          flycheck projectile ag flx-ido auto-complete
+          markdown-mode yaml-mode json-mode csv-mode
+          go-mode js2-mode jedi php-mode
+          web-mode jade-mode stylus-mode
+          nginx-mode apache-mode
+          puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
-(load-theme (if window-system
-                'sanityinc-solarized-dark
-                'sanityinc-solarized-light)
-            t)
+(load-theme
+ (if window-system
+     'sanityinc-solarized-dark
+   'sanityinc-solarized-light)
+ t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (projectile-global-mode)
