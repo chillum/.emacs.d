@@ -78,7 +78,10 @@
                puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
-(load-theme 'sanityinc-solarized-dark t)
+(load-theme (if window-system
+                'sanityinc-solarized-dark
+                'sanityinc-solarized-light)
+            t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (projectile-global-mode)
