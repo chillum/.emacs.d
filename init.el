@@ -98,6 +98,7 @@
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
