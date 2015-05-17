@@ -103,7 +103,7 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
-(fset 'js-mode 'js2-mode)
+(fset 'javascript-mode 'js2-mode)
 (fset 'html-mode 'web-mode)
 (fset 'xml-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
