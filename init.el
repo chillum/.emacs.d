@@ -6,7 +6,6 @@
 ;; Set fonts and window geometry. Customize this with:
 ;;  M-x customize-face default
 ;;  M-x customize-variable default-frame-alist
-;;
 (set-face-font 'default (if (eq system-type 'darwin)
                             "Menlo-15"
                           "DejaVu Sans Mono-10.5"))
@@ -83,6 +82,8 @@
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
 (setq apache-indent-level 2)
+
+;; Install ELPA packages
 (package-initialize)
 (unless package-archive-contents
   (package-refresh-contents))
@@ -96,6 +97,7 @@
           puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
+
 (load-theme
  (if window-system
      'sanityinc-solarized-dark
@@ -103,6 +105,7 @@
  t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
+(fset 'javascript-mode 'js2-mode)
 (projectile-global-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
@@ -110,18 +113,20 @@
     (add-hook 'python-mode-hook 'jedi:setup))
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
+
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
 (global-set-key "\C-cd" 'calendar)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
+
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
-(fset 'javascript-mode 'js2-mode)
+
 (fset 'html-mode 'web-mode)
 (fset 'xml-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
@@ -132,6 +137,7 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . web-mode))
+
 (add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
