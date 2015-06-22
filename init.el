@@ -65,7 +65,7 @@
  '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
-(set-face-font 'default (if (eq window-system 'ns)
+(set-face-font 'default (if (eq system-type 'darwin)
                             "Menlo-15"
                           "DejaVu Sans Mono-10.5"))
 (setq apache-indent-level 2)
@@ -76,7 +76,7 @@
          '(color-theme-sanityinc-solarized magit psvn
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
-          go-mode js2-mode jedi php-mode
+          go-mode erlang js2-mode jedi php-mode
           web-mode jade-mode stylus-mode
           nginx-mode apache-mode
           puppet-mode dockerfile-mode vagrant))
@@ -92,7 +92,7 @@
 (projectile-global-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
-(if (executable-find "pip")
+(if (executable-find "python")
     (add-hook 'python-mode-hook 'jedi:setup))
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
