@@ -6,9 +6,15 @@
 ;; Set fonts and window geometry. Customize this with:
 ;;  M-x customize-face default
 ;;  M-x customize-variable default-frame-alist
-(set-face-font 'default (if (eq system-type 'darwin)
-                            "Menlo-15"
-                          "DejaVu Sans Mono-10.5"))
+(set-face-font 'default
+               (concat
+                (if (eq system-type 'darwin)
+                    "Menlo"
+                  "DejaVu Sans Mono")
+                "-"
+                (if (>= (display-pixel-height) 1050)
+                    "15"
+                  "10.5")))
 (setq default-frame-alist
       (if (>= (display-pixel-height) 1050)
           '((height . 53)
