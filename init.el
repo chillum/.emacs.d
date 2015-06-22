@@ -61,11 +61,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 150 :family "Menlo"))))
  '(popup-face ((t (:background "#073642" :foreground "#839496"))))
  '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
+(set-face-font 'default (if (eq window-system 'ns)
+                            "Menlo-15"
+                          "DejaVu Sans Mono-10.5"))
 (setq apache-indent-level 2)
 (package-initialize)
 (unless package-archive-contents
@@ -90,8 +92,10 @@
 (projectile-global-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
-(add-hook 'python-mode-hook 'jedi:setup)
-(add-hook 'text-mode-hook 'flyspell-mode)
+(if (executable-find "pip")
+    (add-hook 'python-mode-hook 'jedi:setup))
+(if (executable-find "aspell")
+    (add-hook 'text-mode-hook 'flyspell-mode))
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
 (global-set-key "\C-cd" 'calendar)
