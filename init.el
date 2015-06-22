@@ -1,3 +1,26 @@
+;;; init.el -- Emacs configuration
+;;; Commentary:
+;;;  https://github.com/chillum/.emacs.d
+;;; Code:
+
+;; Set fonts and window geometry. Customize this with:
+;;  M-x customize-face default
+;;  M-x customize-variable default-frame-alist
+;;
+(set-face-font 'default (if (eq system-type 'darwin)
+                            "Menlo-15"
+                          "DejaVu Sans Mono-10.5"))
+(setq default-frame-alist
+      (if (>= (display-pixel-height) 1050)
+          '((height . 53)
+            (width . 120)
+            (top . 50)
+            (left . 380))
+        '((height . 44)
+          (width . 120)
+          (top . 3)
+          (left . 220))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -14,12 +37,6 @@
      (other . "stroustrup"))))
  '(column-number-mode t)
  '(css-indent-offset 2)
- '(default-frame-alist
-    (quote
-     ((height . 53)
-      (width . 120)
-      (top . 50)
-      (left . 380))))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
  '(dired-listing-switches "-alh")
@@ -65,9 +82,6 @@
  '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
-(set-face-font 'default (if (eq system-type 'darwin)
-                            "Menlo-15"
-                          "DejaVu Sans Mono-10.5"))
 (setq apache-indent-level 2)
 (package-initialize)
 (unless package-archive-contents
@@ -121,3 +135,6 @@
 (add-to-list 'auto-mode-alist '("nginx\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/.+\\.conf\\'" . nginx-mode))
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
+
+(provide 'init)
+;;; init.el ends here
