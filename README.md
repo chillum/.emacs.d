@@ -1,10 +1,15 @@
 ## emacs.d
 
 Emacs config files  
-Requires Emacs 24+  
+Require Emacs 24+  
 License: public domain
 
 ### Usage
 
 1. Clone the repo in your home directory
 2. Start Emacs
+
+### Windows notes
+
+1. You should have DejaVu fonts [installed](http://dejavu-fonts.org/wiki/Download)
+2. You should set `%HOME%` to `%HOMEDRIVE%%HOMEPATH%`
