@@ -1,7 +1,7 @@
 ## emacs.d
 
-Emacs config files  
-Require Emacs 24+  
+Emacs config  
+Requires Emacs 24+  
 License: public domain
 
 ### Usage
