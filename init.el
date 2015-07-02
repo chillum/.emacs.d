@@ -69,6 +69,7 @@
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
+ '(sentence-end-double-space nil)
  '(server-mode t)
  '(show-paren-mode t)
  '(sql-product (quote postgres))
