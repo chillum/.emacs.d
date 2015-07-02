@@ -119,6 +119,7 @@
     (add-hook 'python-mode-hook 'jedi:setup))
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
+(add-hook 'text-mode-hook 'auto-fill-mode)
 
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-ca" 'calculator)
