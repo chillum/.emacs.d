@@ -1,7 +1,8 @@
-.python-environments
+.python-environments/
 ac-comphist.dat
-elpa
-eshell
+elpa/
+eshell/
 projectile-bookmarks.eld
+server/
 tramp
 url
