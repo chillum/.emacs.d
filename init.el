@@ -26,6 +26,9 @@
           (top . 3)
           (left . 220))))
 
+(if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
+ (tool-bar-mode 0))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -74,7 +77,6 @@
  '(show-paren-mode t)
  '(sql-product (quote postgres))
  '(tab-width 4)
- '(tool-bar-mode nil)
  '(visible-bell t)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
