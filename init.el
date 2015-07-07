@@ -98,7 +98,7 @@
          '(color-theme-sanityinc-solarized magit psvn
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
-          go-mode erlang js2-mode jedi php-mode
+          go-mode js2-mode jedi php-mode
           web-mode jade-mode stylus-mode
           nginx-mode apache-mode
           puppet-mode dockerfile-mode vagrant))
