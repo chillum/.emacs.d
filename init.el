@@ -80,6 +80,8 @@
  '(visible-bell t)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
+ '(web-mode-enable-auto-closing nil)
+ '(web-mode-enable-auto-quoting nil)
  '(web-mode-markup-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -138,7 +140,6 @@
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
 
 (fset 'html-mode 'web-mode)
-(fset 'xml-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(?:r\\|dj\\)html\\'" . web-mode))
