@@ -49,7 +49,7 @@
    (quote
     ((css-mode . "css,html")
      (less-css-mode . "less,css,html")
-     (scss-mode . "sass,css,html")
+     (scss-mode . "compass,sass,css,html")
      (stylus-mode . "css,stylus,html")
      (go-mode . "go,godoc")
      (html-mode . "html,angularjs,css,javascript")
