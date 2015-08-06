@@ -45,24 +45,6 @@
      (other . "stroustrup"))))
  '(column-number-mode t)
  '(css-indent-offset 2)
- '(dash-at-point-mode-alist
-   (quote
-    ((css-mode . "css,html")
-     (less-css-mode . "less,css,html")
-     (scss-mode . "compass,sass,css,html")
-     (stylus-mode . "css,stylus,html")
-     (go-mode . "go,godoc")
-     (html-mode . "html,angularjs,css,javascript")
-     (jade-mode . "html,angularjs,css,javascript")
-     (js2-mode . "javascript,nodejs,angularjs")
-     (apache-mode . "apache")
-     (nginx-mode . "nginx")
-     (puppet-mode . "puppet")
-     (python-mode . "python,django")
-     (ruby-mode . "ruby")
-     (sh-mode . "bash,manpages")
-     (sql-mode . "psql")
-     (yaml-mode . "ansible"))))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
  '(dired-listing-switches "-alh")
@@ -118,7 +100,7 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg
-         '(color-theme-sanityinc-solarized magit psvn dash-at-point
+         '(color-theme-sanityinc-solarized magit psvn
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
           go-mode js2-mode jedi php-mode web-mode jade-mode
@@ -151,7 +133,6 @@
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
-(global-set-key "\C-cs" 'dash-at-point)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
