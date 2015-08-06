@@ -45,6 +45,24 @@
      (other . "stroustrup"))))
  '(column-number-mode t)
  '(css-indent-offset 2)
+ '(dash-at-point-mode-alist
+   (quote
+    ((python-mode . "python,django")
+     (ruby-mode . "ruby")
+     (go-mode . "go,godoc")
+     (js2-mode . "javascript,nodejs,angularjs")
+     (html-mode . "html,angularjs,css,javascript")
+     (jade-mode . "html,angularjs,css,javascript")
+     (css-mode . "css,html")
+     (less-css-mode . "less,css,html")
+     (scss-mode . "sass,css,html")
+     (stylus-mode . "css,stylus,html")
+     (apache-mode . "apache")
+     (nginx-mode . "nginx")
+     (sh-mode . "bash,manpages")
+     (sql-mode . "psql")
+     (puppet-mode . "puppet")
+     (yaml-mode . "ansible"))))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
  '(dired-listing-switches "-alh")
@@ -99,11 +117,11 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg
-         '(color-theme-sanityinc-solarized magit psvn
+         '(color-theme-sanityinc-solarized magit psvn dash-at-point
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
-          go-mode js2-mode jedi php-mode
-          web-mode jade-mode stylus-mode
+          go-mode js2-mode jedi php-mode web-mode jade-mode
+          stylus-mode less-css-mode scss-mode
           nginx-mode apache-mode
           puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
@@ -132,6 +150,7 @@
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
+(global-set-key "\C-cs" 'dash-at-point)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
