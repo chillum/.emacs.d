@@ -68,6 +68,8 @@
  '(magit-push-always-verify nil)
  '(make-backup-files nil)
  '(markdown-command "redcarpet")
+ '(ns-alternate-modifier (quote none))
+ '(ns-command-modifier (quote meta))
  '(package-archives
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
