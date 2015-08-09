@@ -101,7 +101,7 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg
-         '(color-theme-sanityinc-solarized magit psvn
+         '(color-theme-sanityinc-solarized magit
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
           go-mode js2-mode jedi php-mode web-mode jade-mode
@@ -132,7 +132,6 @@
 (global-set-key "\C-ca" 'calculator)
 (global-set-key "\C-cd" 'calendar)
 (global-set-key "\C-cm" 'magit-status)
-(global-set-key "\C-cn" 'svn-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
