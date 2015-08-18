@@ -59,6 +59,7 @@
  '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
+ '(initial-scratch-message nil)
  '(jedi:complete-on-dot t)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
