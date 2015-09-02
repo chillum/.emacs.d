@@ -57,7 +57,6 @@
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
- '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(jedi:complete-on-dot t)
