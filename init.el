@@ -118,7 +118,6 @@
  t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
-(fset 'javascript-mode 'js2-mode)
 (projectile-global-mode)
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
@@ -139,6 +138,9 @@
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
 
 (fset 'html-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
