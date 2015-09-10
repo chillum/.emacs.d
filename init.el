@@ -66,7 +66,7 @@
  '(magit-push-always-verify nil)
  '(magit-revert-buffers t)
  '(make-backup-files nil)
- '(markdown-command "redcarpet")
+ '(markdown-command "redcarpet --parse fenced_code_blocks")
  '(ns-alternate-modifier (quote none))
  '(ns-command-modifier (quote meta))
  '(package-archives
