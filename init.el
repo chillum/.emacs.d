@@ -116,7 +116,7 @@
           markdown-mode yaml-mode json-mode csv-mode
           go-mode js2-mode jedi php-mode web-mode jade-mode
           stylus-mode less-css-mode scss-mode
-          nginx-mode apache-mode
+          nginx-mode apache-mode fish-mode
           puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
