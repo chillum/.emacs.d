@@ -34,7 +34,7 @@
           (left . 220)))))
 
 (if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
- (tool-bar-mode 0))
+    (tool-bar-mode 0))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -115,9 +115,9 @@
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
           go-mode js2-mode jedi php-mode web-mode jade-mode
-          stylus-mode less-css-mode scss-mode
+          emmet-mode stylus-mode less-css-mode scss-mode
           nginx-mode apache-mode fish-mode
-          puppet-mode dockerfile-mode vagrant))
+          ansible-doc puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
@@ -151,6 +151,8 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
 
+(add-hook 'yaml-mode-hook 'ansible-doc-mode)
+
 (fset 'html-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
@@ -160,6 +162,9 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . web-mode))
+
+(add-hook 'web-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
 
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
 
