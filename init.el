@@ -129,6 +129,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (projectile-global-mode)
+(projectile-register-project-type 'ruby-rake '("Rakefile") "rake" "rake test")
+(projectile-register-project-type 'make '("Makefile") "make" "make test")
 (global-flycheck-mode t)
 (add-hook 'prog-mode-hook 'auto-complete-mode)
 (if (executable-find "python")
