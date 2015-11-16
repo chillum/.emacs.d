@@ -139,16 +139,11 @@
     (add-hook 'text-mode-hook 'flyspell-mode))
 
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
-(global-set-key "\C-ca" 'calculator)
-(global-set-key "\C-cd" 'calendar)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.rbw\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\(?:Proc\\|Berks\\)file\\'" . ruby-mode))
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
