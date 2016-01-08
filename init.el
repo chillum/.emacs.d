@@ -81,7 +81,11 @@
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (yaml-mode web-mode vagrant stylus-mode scss-mode puppet-mode projectile php-mode nginx-mode markdown-mode magit less-css-mode json-mode js2-mode jedi jade-mode go-mode flycheck flx-ido fish-mode emmet-mode dockerfile-mode csv-mode color-theme-sanityinc-solarized apache-mode ansible-doc ag)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
+ '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
  '(server-mode t)
  '(sh-shell-file "/bin/bash")
@@ -89,7 +93,6 @@
  '(sql-product (quote postgres))
  '(tab-width 4)
  '(tramp-default-method "ssh")
- '(visible-bell t)
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-closing nil)
