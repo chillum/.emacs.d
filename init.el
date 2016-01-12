@@ -68,6 +68,7 @@
      (python-mode . "python,django")
      (ruby-mode . "ruby")
      (sh-mode . "bash,manpages")
+     (fish-mode . "fish,manpages")
      (sql-mode . "psql")
      (yaml-mode . "ansible"))))
  '(default-input-method "russian-computer")
