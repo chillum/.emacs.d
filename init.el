@@ -52,6 +52,24 @@
      (other . "stroustrup"))))
  '(column-number-mode t)
  '(css-indent-offset 2)
+ '(dash-at-point-mode-alist
+   (quote
+    ((css-mode . "css,html")
+     (less-css-mode . "less,css,html")
+     (scss-mode . "compass,sass,css,html")
+     (stylus-mode . "css,stylus,html")
+     (go-mode . "go,godoc")
+     (html-mode . "html,angularjs,css,javascript")
+     (jade-mode . "html,angularjs,css,javascript")
+     (js2-mode . "javascript,nodejs,angularjs")
+     (apache-mode . "apache")
+     (nginx-mode . "nginx")
+     (puppet-mode . "puppet")
+     (python-mode . "python,django")
+     (ruby-mode . "ruby")
+     (sh-mode . "bash,manpages")
+     (sql-mode . "psql")
+     (yaml-mode . "ansible"))))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
  '(dired-listing-switches "-alh")
@@ -81,9 +99,6 @@
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
- '(package-selected-packages
-   (quote
-    (yaml-mode web-mode vagrant stylus-mode scss-mode puppet-mode projectile php-mode nginx-mode markdown-mode magit less-css-mode json-mode js2-mode jedi jade-mode go-mode flycheck flx-ido fish-mode emmet-mode dockerfile-mode csv-mode color-theme-sanityinc-solarized apache-mode ansible-doc ag)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -114,13 +129,13 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (dolist (pkg
-         '(color-theme-sanityinc-solarized magit
+         '(color-theme-sanityinc-solarized magit dash-at-point
           flycheck projectile ag flx-ido auto-complete
           markdown-mode yaml-mode json-mode csv-mode
           go-mode js2-mode jedi php-mode web-mode jade-mode
           emmet-mode stylus-mode less-css-mode scss-mode
           nginx-mode apache-mode fish-mode
-          ansible-doc puppet-mode dockerfile-mode vagrant))
+          puppet-mode dockerfile-mode vagrant))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
@@ -144,14 +159,13 @@
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
+(global-set-key "\C-cs" 'dash-at-point)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
-
-(add-hook 'yaml-mode-hook 'ansible-doc-mode)
 
 (fset 'html-mode 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
