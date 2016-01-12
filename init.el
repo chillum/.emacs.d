@@ -58,7 +58,7 @@
      (less-css-mode . "less,css,html")
      (scss-mode . "compass,sass,css,html")
      (stylus-mode . "css,stylus,html")
-     (go-mode . "go,godoc")
+     (go-mode . "godoc,go")
      (html-mode . "html,angularjs,css,javascript")
      (jade-mode . "html,angularjs,css,javascript")
      (js2-mode . "javascript,nodejs,angularjs")
