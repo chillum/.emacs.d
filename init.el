@@ -160,7 +160,7 @@
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 (global-set-key "\C-cm" 'magit-status)
 (global-set-key "\C-cp" 'flycheck-list-errors)
-(global-set-key "\C-cs" 'dash-at-point)
+(global-set-key "\C-cd" 'dash-at-point)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
