@@ -36,6 +36,9 @@
 (if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
     (tool-bar-mode 0))
 
+(if (eq system-type 'darwin)
+    (setq trash-directory "~/.Trash"))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -59,7 +62,7 @@
      (scss-mode . "compass,sass,css,html")
      (stylus-mode . "css,stylus,html")
      (go-mode . "godoc,go")
-     (html-mode . "html,angularjs,css,javascript")
+     (web-mode . "html,angularjs,css,javascript")
      (jade-mode . "html,angularjs,css,javascript")
      (js2-mode . "javascript,nodejs,angularjs")
      (apache-mode . "apache")
@@ -79,6 +82,7 @@
  '(eshell-hist-ignoredups t)
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
+ '(global-auto-revert-mode t)
  '(icomplete-mode t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
@@ -90,16 +94,18 @@
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
  '(js2-skip-preprocessor-directives t)
+ '(magit-auto-revert-mode nil)
  '(magit-push-always-verify nil)
- '(magit-revert-buffers t)
+ '(magit-revert-buffers t t)
  '(make-backup-files nil)
  '(markdown-command "redcarpet --parse fenced_code_blocks")
- '(ns-alternate-modifier (quote none))
- '(ns-command-modifier (quote meta))
  '(package-archives
    (quote
     (("melpa" . "http://melpa.milkbox.net/packages/")
      ("gnu" . "http://elpa.gnu.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (vagrant dockerfile-mode puppet-mode fish-mode apache-mode nginx-mode scss-mode less-css-mode emmet-mode jade-mode web-mode php-mode jedi js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -127,18 +133,7 @@
 
 ;; Install ELPA packages
 (package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
-(dolist (pkg
-         '(color-theme-sanityinc-solarized magit dash-at-point
-          flycheck projectile ag flx-ido auto-complete
-          markdown-mode yaml-mode json-mode csv-mode
-          go-mode js2-mode jedi php-mode web-mode jade-mode
-          emmet-mode stylus-mode less-css-mode scss-mode
-          nginx-mode apache-mode fish-mode
-          puppet-mode dockerfile-mode vagrant))
-  (unless (package-installed-p pkg)
-    (package-install pkg)))
+(package-install-selected-packages)
 
 (load-theme
  (if window-system
@@ -163,6 +158,7 @@
 (global-set-key "\C-cd" 'dash-at-point)
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -176,7 +172,6 @@
 (add-to-list 'auto-mode-alist '("\\.go\\(?:tmpl\\|html\\)\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.plist\\'" . web-mode))
 
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'css-mode-hook  'emmet-mode)
