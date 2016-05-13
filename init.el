@@ -157,6 +157,7 @@
 (global-set-key "\C-cp" 'flycheck-list-errors)
 (global-set-key "\C-cd" 'dash-at-point)
 
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
