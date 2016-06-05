@@ -36,8 +36,10 @@
 (if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
     (tool-bar-mode 0))
 
-(if (eq system-type 'darwin)
-    (setq trash-directory "~/.Trash"))
+(when (eq system-type 'darwin)
+  (setq trash-directory "~/.Trash")
+  (unless (getenv "GOPATH")
+    (setenv "GOPATH" (concat (getenv "HOME") "/Go"))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
