@@ -80,6 +80,7 @@
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
+ '(fill-column 120)
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
  '(global-auto-revert-mode t)
