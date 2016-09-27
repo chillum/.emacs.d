@@ -36,10 +36,8 @@
 (if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
     (tool-bar-mode 0))
 
-(when (eq system-type 'darwin)
-  (setq trash-directory "~/.Trash")
-  (unless (getenv "GOPATH")
-    (setenv "GOPATH" (concat (getenv "HOME") "/Go"))))
+(if (eq system-type 'darwin)
+    (setq trash-directory "~/.Trash"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -82,6 +80,7 @@
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
+ '(exec-path-from-shell-variables (quote ("PATH" "GOPATH")))
  '(fill-column 120)
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
@@ -108,7 +107,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (groovy-mode vagrant dockerfile-mode puppet-mode fish-mode apache-mode nginx-mode scss-mode less-css-mode emmet-mode jade-mode web-mode php-mode jedi js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (exec-path-from-shell groovy-mode vagrant dockerfile-mode puppet-mode fish-mode apache-mode nginx-mode scss-mode less-css-mode emmet-mode jade-mode web-mode php-mode jedi js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -143,6 +142,10 @@
      'sanityinc-solarized-dark
    'sanityinc-solarized-light)
  t)
+
+(if (eq window-system 'ns)
+    (exec-path-from-shell-initialize))
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 (projectile-global-mode)
