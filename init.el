@@ -71,7 +71,6 @@
      (python-mode . "python,django")
      (ruby-mode . "ruby,rubygems")
      (sh-mode . "bash,manpages")
-     (fish-mode . "fish,manpages")
      (sql-mode . "psql")
      (yaml-mode . "ansible"))))
  '(default-input-method "russian-computer")
@@ -107,7 +106,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell groovy-mode vagrant dockerfile-mode puppet-mode fish-mode apache-mode nginx-mode scss-mode less-css-mode emmet-mode jade-mode web-mode php-mode jedi js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (exec-path-from-shell groovy-mode vagrant dockerfile-mode puppet-mode apache-mode nginx-mode scss-mode less-css-mode emmet-mode jade-mode web-mode php-mode jedi js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
