@@ -163,7 +163,7 @@
 (global-set-key "\C-cd" 'dash-at-point)
 
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\)\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
