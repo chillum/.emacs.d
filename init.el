@@ -66,7 +66,7 @@
      (apache-mode . "apache")
      (nginx-mode . "nginx")
      (puppet-mode . "puppet")
-     (python-mode . "python,django")
+     (python-mode . "python,tornado,django")
      (ruby-mode . "ruby,rubygems")
      (sh-mode . "bash,manpages")
      (sql-mode . "psql")
