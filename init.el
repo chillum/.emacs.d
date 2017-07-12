@@ -75,7 +75,6 @@
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
  '(global-auto-revert-mode t)
- '(gud-gdb-command-name "gdb --annotate=1")
  '(icomplete-mode t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
@@ -100,7 +99,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell groovy-mode vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode web-mode php-mode jedi js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode web-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -139,6 +138,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
+(add-to-list 'auto-mode-alist '("\\.groovy\\'" . java-mode))
+(add-to-list 'auto-mode-alist '("Jenkinsfile'" . java-mode))
 
 ;; ELPA packages
 (when (fboundp 'package-initialize)
@@ -162,8 +163,6 @@
 
   (add-hook 'web-mode-hook 'emmet-mode)
   (add-hook 'css-mode-hook  'emmet-mode)
-  (if (executable-find "python")
-      (add-hook 'python-mode-hook 'jedi:setup))
 
   (global-set-key "\C-cm" 'magit-status)
   (global-set-key "\C-cp" 'flycheck-list-errors)
@@ -171,7 +170,6 @@
 
   (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
   (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
-  (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
   (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
