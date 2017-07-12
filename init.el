@@ -37,7 +37,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ac-auto-start 1)
  '(auto-save-default nil)
  '(auto-save-list-file-prefix nil)
  '(blink-cursor-mode nil)
@@ -100,7 +99,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode auto-complete flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -131,7 +130,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
 
-(add-hook 'prog-mode-hook 'auto-complete-mode)
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
 
@@ -140,7 +138,7 @@
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . java-mode))
-(add-to-list 'auto-mode-alist '("Jenkinsfile'" . java-mode))
+(add-to-list 'auto-mode-alist '("Jenkinsfile" . java-mode))
 
 ;; ELPA packages
 (when (fboundp 'package-initialize)
