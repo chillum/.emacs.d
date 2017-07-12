@@ -75,6 +75,7 @@
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
  '(global-auto-revert-mode t)
+ '(global-visual-line-mode t)
  '(icomplete-mode t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
