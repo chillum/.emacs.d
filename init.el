@@ -75,9 +75,11 @@
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
  '(global-auto-revert-mode t)
+ '(gud-gdb-command-name "gdb --annotate=1")
  '(icomplete-mode t)
  '(ido-everywhere t)
  '(ido-mode (quote both) nil (ido))
+ '(ido-save-directory-list-file "~/.emacs.d/ido.last")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
@@ -86,6 +88,7 @@
  '(js2-basic-offset 2)
  '(js2-include-node-externs t)
  '(js2-skip-preprocessor-directives t)
+ '(large-file-warning-threshold nil)
  '(magit-auto-revert-mode nil)
  '(magit-push-always-verify nil)
  '(magit-revert-buffers t t)
@@ -121,60 +124,65 @@
  '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
  '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
  '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
+
+;; Base configuration
 (setq apache-indent-level 2)
-
-;; Install ELPA packages
-(package-initialize)
-(package-install-selected-packages)
-
-(load-theme
- (if window-system
-     'sanityinc-solarized-dark
-   'sanityinc-solarized-light)
- t)
-
-(if (eq window-system 'ns)
-    (exec-path-from-shell-initialize))
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
-(projectile-mode t)
-(projectile-register-project-type 'ruby-rake '("Rakefile") "rake" "rake test")
-(projectile-register-project-type 'make '("Makefile") "make" "make test")
-(global-flycheck-mode t)
+
 (add-hook 'prog-mode-hook 'auto-complete-mode)
-(if (executable-find "python")
-    (add-hook 'python-mode-hook 'jedi:setup))
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
 
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
-(global-set-key "\C-cm" 'magit-status)
-(global-set-key "\C-cp" 'flycheck-list-errors)
-(global-set-key "\C-cd" 'dash-at-point)
 
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
-(add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
+;; ELPA packages
+(when (fboundp 'package-initialize)
+  (package-initialize)
+  (package-refresh-contents)
+  (package-install-selected-packages)
 
-(add-to-list 'auto-mode-alist '("\\.[sx]?html?\\(\\.[a-zA-Z_]+\\)?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.\\(?:r\\|dj\\)html\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.e\\(?:rb\\|js\\)\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.go\\(?:tmpl\\|html\\)\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode))
+  (load-theme
+   (if window-system
+       'sanityinc-solarized-dark
+     'sanityinc-solarized-light)
+   t)
 
-(add-hook 'web-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook  'emmet-mode)
+  (if (eq window-system 'ns)
+      (exec-path-from-shell-initialize))
 
-(add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
+  (projectile-mode t)
+;  (projectile-register-project-type 'ruby-rake '("Rakefile") "rake" "rake test")
+;  (projectile-register-project-type 'make '("Makefile") "make" "make test")
+  (global-flycheck-mode t)
+
+  (add-hook 'web-mode-hook 'emmet-mode)
+  (add-hook 'css-mode-hook  'emmet-mode)
+  (if (executable-find "python")
+      (add-hook 'python-mode-hook 'jedi:setup))
+
+  (global-set-key "\C-cm" 'magit-status)
+  (global-set-key "\C-cp" 'flycheck-list-errors)
+  (global-set-key "\C-cd" 'dash-at-point)
+
+  (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+  (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+  (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
+  (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
+  (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\(\\.[a-zA-Z_]+\\)?\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.[jgla]sp\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.\\(?:r\\|dj\\)html\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.e\\(?:rb\\|js\\)\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.go\\(?:tmpl\\|html\\)\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.j2\\'" . web-mode)))
 
 (provide 'init)
 ;;; init.el ends here
