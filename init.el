@@ -143,14 +143,11 @@
 ;; ELPA packages
 (when (fboundp 'package-initialize)
   (package-initialize)
-  (package-refresh-contents)
+  (unless package-alist
+    (package-refresh-contents))
   (package-install-selected-packages)
 
-  (load-theme
-   (if window-system
-       'sanityinc-solarized-dark
-     'sanityinc-solarized-light)
-   t)
+  (load-theme 'sanityinc-solarized-light t)
 
   (if (eq window-system 'ns)
       (exec-path-from-shell-initialize))
