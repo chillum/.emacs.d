@@ -18,9 +18,9 @@
 (setq default-frame-alist
       (if (>= (display-pixel-height) 800)
           '((height . 50)
-            (width . 120)
+            (width . 130)
             (top . 0)
-            (left . 190))
+            (left . 121))
         '((height . 44)
           (width . 120)
           (top . 3)
@@ -158,8 +158,8 @@
       (exec-path-from-shell-initialize))
 
   (projectile-mode t)
-;  (projectile-register-project-type 'ruby-rake '("Rakefile") "rake" "rake test")
-;  (projectile-register-project-type 'make '("Makefile") "make" "make test")
+  (projectile-register-project-type 'ruby-rake '("Rakefile") :compile "rake" :test "rake test")
+  (projectile-register-project-type 'make '("Makefile") :compile "make" :test "make test")
   (global-flycheck-mode t)
 
   (add-hook 'html-mode-hook 'emmet-mode)
