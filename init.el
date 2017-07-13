@@ -13,14 +13,14 @@
                   "DejaVu Sans Mono")
                 "-"
                 (if (>= (display-pixel-height) 800)
-                    "13"
+                    "12"
                   "10.5")))
 (setq default-frame-alist
       (if (>= (display-pixel-height) 800)
-          '((height . 50)
-            (width . 130)
+          '((height . 53)
+            (width . 150)
             (top . 0)
-            (left . 121))
+            (left . 122))
         '((height . 44)
           (width . 120)
           (top . 3)
