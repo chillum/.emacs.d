@@ -148,7 +148,7 @@
     (package-refresh-contents))
   (package-install-selected-packages)
 
-  (load-theme 'sanityinc-solarized-light t)
+  (load-theme (if window-system 'sanityinc-solarized-dark 'sanityinc-solarized-light) t)
 
   (if (eq window-system 'ns)
       (exec-path-from-shell-initialize))
