@@ -46,6 +46,8 @@
      (awk-mode . "awk")
      (other . "stroustrup"))))
  '(column-number-mode t)
+ '(company-idle-delay 0.25)
+ '(company-minimum-prefix-length 1)
  '(css-indent-offset 2)
  '(dash-at-point-mode-alist
    (quote
@@ -100,7 +102,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -120,11 +122,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(popup-face ((t (:background "#073642" :foreground "#839496"))))
- '(popup-menu-mouse-face ((t (:background "#eee8d5" :foreground "#93a1a1"))))
- '(popup-menu-selection-face ((t (:background "#eee8d5" :foreground "#657b83"))))
- '(popup-tip-face ((t (:background "#073642" :foreground "#93a1a1")))))
-
+ )
 ;; Base configuration
 (setq apache-indent-level 2)
 
@@ -157,6 +155,7 @@
   (projectile-register-project-type 'ruby-rake '("Rakefile") :compile "rake" :test "rake test")
   (projectile-register-project-type 'make '("Makefile") :compile "make" :test "make test")
   (global-flycheck-mode t)
+  (global-company-mode t)
 
   (add-hook 'html-mode-hook 'emmet-mode)
   (add-hook 'css-mode-hook  'emmet-mode)
