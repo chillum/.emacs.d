@@ -69,6 +69,9 @@
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
  '(dired-listing-switches "-alh")
+ '(dired-omit-extensions (quote (".swp")))
+ '(dired-omit-files
+   "^\\.DS_Store$\\|^Thumbs\\.db$\\|^\\.CFUserTextEncoding$\\|^\\.localized$\\|^\\.git$\\|^\\.vagrant$\\|^\\.#")
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
@@ -124,10 +127,13 @@
  ;; If there is more than one, they won't work right.
  )
 ;; Base configuration
-(setq apache-indent-level 2)
-
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
+
+(setq apache-indent-level 2
+      dired-omit-mode t)
+
+(add-hook 'dired-load-hook '(lambda () (require 'dired-x)))
 
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
