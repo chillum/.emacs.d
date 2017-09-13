@@ -20,7 +20,7 @@
           '((height . 53)
             (width . 150)
             (top . 0)
-            (left . 122))
+            (left . 125))
         '((height . 44)
           (width . 120)
           (top . 3)
