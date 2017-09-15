@@ -76,9 +76,7 @@
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
- '(exec-path-from-shell-variables
-   (quote
-    ("PATH" "GOPATH")))
+ '(exec-path-from-shell-variables (quote ("PATH" "GOPATH")))
  '(fill-column 120)
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
@@ -108,7 +106,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (inf-ruby yasnippet ansible company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (move-text inf-ruby yasnippet ansible company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -156,6 +154,7 @@
   (package-install-selected-packages)
 
   (load-theme (if window-system 'sanityinc-solarized-dark 'sanityinc-solarized-light) t)
+  (move-text-default-bindings)
 
   (if (eq window-system 'ns)
       (exec-path-from-shell-initialize))
