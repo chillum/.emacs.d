@@ -37,6 +37,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansible::vault-password-file "~/Documents/.vault")
  '(auto-save-default nil)
  '(auto-save-list-file-prefix nil)
  '(blink-cursor-mode nil)
@@ -75,7 +76,9 @@
  '(dired-recursive-copies (quote always))
  '(dired-recursive-deletes (quote always))
  '(eshell-hist-ignoredups t)
- '(exec-path-from-shell-variables (quote ("PATH" "GOPATH")))
+ '(exec-path-from-shell-variables
+   (quote
+    ("PATH" "GOPATH")))
  '(fill-column 120)
  '(flycheck-completion-system (quote ido))
  '(flyspell-mode-line-string " Spell")
@@ -105,7 +108,7 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (inf-ruby yasnippet ansible company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
@@ -125,7 +128,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(ansible::task-label-face ((t nil))))
 ;; Base configuration
 (fset 'yes-or-no-p 'y-or-n-p)
 (fset 'perl-mode 'cperl-mode)
@@ -162,6 +165,10 @@
   (projectile-register-project-type 'make '("Makefile") :compile "make" :test "make test")
   (global-flycheck-mode t)
   (global-company-mode t)
+  (yas-global-mode t)
+
+  (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
+  (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt)
 
   (add-hook 'html-mode-hook 'emmet-mode)
   (add-hook 'css-mode-hook  'emmet-mode)
@@ -175,6 +182,9 @@
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
   (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode)))
+
+  (eval-after-load 'magit-remote
+    `(define-key magit-mode-map "f" 'magit-pull-and-fetch-popup))
 
 (provide 'init)
 ;;; init.el ends here
