@@ -50,6 +50,9 @@
  '(company-idle-delay 0.25)
  '(company-minimum-prefix-length 1)
  '(css-indent-offset 2)
+ '(custom-safe-themes
+   (quote
+    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(dash-at-point-mode-alist
    (quote
     ((css-mode . "css,html")
@@ -153,7 +156,7 @@
     (package-refresh-contents))
   (package-install-selected-packages)
 
-  (load-theme (if window-system 'sanityinc-solarized-dark 'sanityinc-solarized-light) t)
+  (if window-system (load-theme 'sanityinc-solarized-dark) t)
   (move-text-default-bindings)
 
   (if (eq window-system 'ns)
