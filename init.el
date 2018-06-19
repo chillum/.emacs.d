@@ -48,7 +48,6 @@
      (other . "stroustrup"))))
  '(column-number-mode t)
  '(company-idle-delay 0.25)
- '(company-minimum-prefix-length 1)
  '(css-indent-offset 2)
  '(custom-safe-themes
    (quote
@@ -69,6 +68,7 @@
      (ruby-mode . "ruby,rubygems")
      (sh-mode . "bash,manpages")
      (sql-mode . "psql")
+     (terraform-mode . "terraform")
      (yaml-mode . "ansible"))))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer (quote dired-directory-changed-p))
@@ -109,8 +109,9 @@
      ("gnu" . "http://elpa.gnu.org/packages/"))))
  '(package-selected-packages
    (quote
-    (move-text inf-ruby yasnippet ansible company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
+    (whitespace-cleanup-mode company-terraform terraform-mode move-text inf-ruby yasnippet ansible company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
  '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
+ '(require-final-newline (quote ask))
  '(ring-bell-function (quote ignore))
  '(sentence-end-double-space nil)
  '(server-mode t)
@@ -118,7 +119,7 @@
  '(show-paren-mode t)
  '(sql-product (quote postgres))
  '(tab-width 4)
- '(tramp-default-method "ssh")
+ '(tramp-default-method "ssh" nil (tramp))
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-closing nil)
@@ -144,6 +145,9 @@
 
 (global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
 
+(global-set-key (kbd "s-w") 'kill-this-buffer)
+(global-set-key (kbd "s-o") 'find-file)
+
 (add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\)\\'" . conf-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . java-mode))
@@ -166,9 +170,10 @@
   (projectile-register-project-type 'ruby-rake '("Rakefile") :compile "rake" :test "rake test")
   (projectile-register-project-type 'make '("Makefile") :compile "make" :test "make test")
   (global-flycheck-mode t)
-  (global-company-mode t)
   (yas-global-mode t)
 
+  (add-hook 'prog-mode-hook 'company-mode)
+  (add-hook 'prog-mode-hook 'whitespace-cleanup-mode)
   (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
   (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt)
 
