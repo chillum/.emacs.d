@@ -5,7 +5,6 @@
 
 ;; Set fonts and window geometry. Customize this with:
 ;;  M-x customize-face default
-;;  M-x customize-variable default-frame-alist
 (set-face-font 'default
                (concat
                 (if (eq system-type 'darwin)
@@ -13,11 +12,6 @@
                   "DejaVu Sans Mono")
                 "-"
                 "12"))
-(setq default-frame-alist
-      '((height . 54)
-        (width . 170)
-        (top . 160)
-        (left . 475)))
 
 (if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
     (tool-bar-mode 0))
@@ -47,6 +41,7 @@
      (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet") (go-mode . "godoc,go")
      (python-mode . "python,tornado,django") (ruby-mode . "ruby,rubygems") (sh-mode . "bash,manpages")
      (sql-mode . "psql") (terraform-mode . "terraform")))
+ '(default-frame-alist '((height . 54) (width . 170) (top . 160) (left . 475)))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer 'dired-directory-changed-p)
  '(dired-free-space nil)
@@ -86,9 +81,9 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
    '(ansible apache-mode color-theme-sanityinc-solarized company company-ansible company-go company-terraform csv-mode
-        dash-at-point dockerfile-mode emmet-mode exec-path-from-shell flx-ido flycheck go-mode haml-mode inf-ruby
-        js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile puppet-mode rg terraform-mode
-        whitespace-cleanup-mode yaml-mode yasnippet))
+             dash-at-point dockerfile-mode emmet-mode exec-path-from-shell flx-ido flycheck go-mode haml-mode inf-ruby
+             js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile puppet-mode rg
+             terraform-mode whitespace-cleanup-mode yaml-mode yasnippet))
  '(projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
  '(require-final-newline 'ask)
  '(ring-bell-function 'ignore)
