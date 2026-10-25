@@ -24,7 +24,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansible::vault-password-file "~/Documents/.vault")
  '(auto-save-default nil)
  '(auto-save-list-file-prefix nil)
  '(blink-cursor-mode nil)
@@ -52,7 +51,6 @@
  '(dired-recursive-copies 'always)
  '(dired-recursive-deletes 'always)
  '(eshell-hist-ignoredups t)
- '(exec-path-from-shell-variables '("PATH" "GOPATH"))
  '(fill-column 120)
  '(flycheck-completion-system 'ido)
  '(flyspell-mode-line-string " Spell")
@@ -89,7 +87,6 @@
  '(ring-bell-function 'ignore)
  '(sentence-end-double-space nil)
  '(server-mode t)
- '(sh-shell-file "/bin/bash")
  '(show-paren-mode t)
  '(sql-product 'postgres)
  '(tab-width 4)
