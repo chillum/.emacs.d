@@ -124,7 +124,7 @@
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
 
-(global-set-key "\C-x\C-b" 'ibuffer-list-buffers)
+(global-set-key "\C-x\C-b" 'ibuffer)
 
 (global-set-key (kbd "s-w") 'kill-this-buffer)
 (global-set-key (kbd "s-o") 'find-file)
