@@ -44,9 +44,9 @@
  '(custom-safe-themes
    '("48d34b6afe72407ca494387c8bea495bb2deee96bd88516f302db1f11e1810a1" default))
  '(dash-at-point-mode-alist
-   '((css-mode . "css,html") (less-css-mode . "css,html") (web-mode . "html,angularjs,css,javascript")
-     (html-mode . "html,angularjs,css,javascript") (haml-mode . "html,angularjs,css,javascript")
-     (js2-mode . "javascript,nodejs,angularjs") (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet")
+   '((css-mode . "css,html") (less-css-mode . "css,html") (web-mode . "html,css,javascript")
+     (html-mode . "html,css,javascript") (haml-mode . "html,css,javascript")
+     (js2-mode . "javascript,nodejs") (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet")
      (go-mode . "godoc,go") (python-mode . "python,tornado,django") (ruby-mode . "ruby,rubygems")
      (sh-mode . "bash,manpages") (sql-mode . "psql") (terraform-mode . "terraform")))
  '(default-input-method "russian-computer")
