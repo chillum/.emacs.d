@@ -42,19 +42,17 @@
  '(auto-save-list-file-prefix nil)
  '(blink-cursor-mode nil)
  '(c-default-style
-   (quote
-    ((java-mode . "java")
+   '((java-mode . "java")
      (awk-mode . "awk")
-     (other . "stroustrup"))))
+     (other . "stroustrup")))
  '(column-number-mode t)
  '(company-idle-delay 0.25)
  '(css-indent-offset 2)
  '(custom-safe-themes
-   (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+   '("48d34b6afe72407ca494387c8bea495bb2deee96bd88516f302db1f11e1810a1"
+default))
  '(dash-at-point-mode-alist
-   (quote
-    ((css-mode . "css,html")
+   '((css-mode . "css,html")
      (less-css-mode . "less,css,html")
      (go-mode . "godoc,go")
      (web-mode . "html,angularjs,css,javascript")
@@ -68,26 +66,26 @@
      (ruby-mode . "ruby,rubygems")
      (sh-mode . "bash,manpages")
      (sql-mode . "psql")
-     (terraform-mode . "terraform")
-     (yaml-mode . "ansible"))))
+     terraform-mode . "terraform")
+     (yaml-mode . "ansible"))
  '(default-input-method "russian-computer")
- '(dired-auto-revert-buffer (quote dired-directory-changed-p))
+ '(dired-auto-revert-buffer 'dired-directory-changed-p)
  '(dired-listing-switches "-alh")
- '(dired-omit-extensions (quote (".swp")))
+ '(dired-omit-extensions '(".swp"))
  '(dired-omit-files
    "^\\.DS_Store$\\|^Thumbs\\.db$\\|^\\.CFUserTextEncoding$\\|^\\.localized$\\|^\\.git$\\|^\\.vagrant$\\|^\\.#")
- '(dired-recursive-copies (quote always))
- '(dired-recursive-deletes (quote always))
+ '(dired-recursive-copies 'always)
+ '(dired-recursive-deletes 'always)
  '(eshell-hist-ignoredups t)
- '(exec-path-from-shell-variables (quote ("PATH" "GOPATH")))
+ '(exec-path-from-shell-variables '("PATH" "GOPATH"))
  '(fill-column 120)
- '(flycheck-completion-system (quote ido))
+ '(flycheck-completion-system 'ido)
  '(flyspell-mode-line-string " Spell")
  '(global-auto-revert-mode t)
  '(global-visual-line-mode t)
  '(icomplete-mode t)
  '(ido-everywhere t)
- '(ido-mode (quote both) nil (ido))
+ '(ido-mode 'both nil (ido))
  '(ido-save-directory-list-file "~/.emacs.d/ido.last")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -104,22 +102,24 @@
  '(make-backup-files nil)
  '(markdown-command "redcarpet --parse fenced_code_blocks")
  '(package-archives
-   (quote
-    (("melpa" . "http://melpa.milkbox.net/packages/")
-     ("gnu" . "http://elpa.gnu.org/packages/"))))
+   '(("melpa" . "https://melpa.org/packages/") ("gnu" . "https://elpa.gnu.org/packages/")
+     ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   (quote
-    (whitespace-cleanup-mode company-terraform terraform-mode move-text inf-ruby yasnippet ansible company-go company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point magit color-theme-sanityinc-solarized)))
- '(projectile-mode-line (quote (:eval (format " [%s]" (projectile-project-name)))))
- '(require-final-newline (quote ask))
- '(ring-bell-function (quote ignore))
+   '(whitespace-cleanup-mode company-terraform terraform-mode move-text inf-ruby yasnippet ansible company-go
+                             company-ansible company exec-path-from-shell vagrant dockerfile-mode puppet-mode
+                             apache-mode nginx-mode less-css-mode emmet-mode jade-mode php-mode js2-mode go-mode
+                             csv-mode json-mode yaml-mode markdown-mode flx-ido ag projectile flycheck dash-at-point
+                             magit color-theme-sanityinc-solarized))
+ '(projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
+ '(require-final-newline 'ask)
+ '(ring-bell-function 'ignore)
  '(sentence-end-double-space nil)
  '(server-mode t)
  '(sh-shell-file "/bin/bash")
  '(show-paren-mode t)
- '(sql-product (quote postgres))
+ '(sql-product 'postgres)
  '(tab-width 4)
- '(tramp-default-method "ssh" nil (tramp))
+ '(tramp-default-method "ssh")
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
  '(web-mode-enable-auto-closing nil)
