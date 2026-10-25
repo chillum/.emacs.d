@@ -156,10 +156,7 @@
   (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
   (add-to-list 'auto-mode-alist '("\\.kube/config\\'" . yaml-mode))
   (add-to-list 'auto-mode-alist '("\\.ebextensions/.*\\.config\\'" . yaml-mode))
-  (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
-
-  (eval-after-load 'magit-remote
-    `(define-key magit-mode-map "f" 'magit-pull-and-fetch-popup)))
+  (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode)))
 
 (provide 'init)
 ;;; init.el ends here
