@@ -44,23 +44,14 @@
  '(custom-safe-themes
    '("48d34b6afe72407ca494387c8bea495bb2deee96bd88516f302db1f11e1810a1" default))
  '(dash-at-point-mode-alist
-   '((css-mode . "css,html")
-     (less-css-mode . "css,html")
-     (web-mode . "html,angularjs,css,javascript")
-     (html-mode . "html,angularjs,css,javascript")
-     (haml-mode . "html,angularjs,css,javascript")
-     (js2-mode . "javascript,nodejs,angularjs")
-     (apache-mode . "apache")
-     (nginx-mode . "nginx")
-     (puppet-mode . "puppet")
-     (go-mode . "godoc,go")
-     (python-mode . "python,tornado,django")
-     (ruby-mode . "ruby,rubygems")
-     (sh-mode . "bash,manpages")
-     (sql-mode . "psql")
-     (terraform-mode . "terraform")))
+   '((css-mode . "css,html") (less-css-mode . "css,html") (web-mode . "html,angularjs,css,javascript")
+     (html-mode . "html,angularjs,css,javascript") (haml-mode . "html,angularjs,css,javascript")
+     (js2-mode . "javascript,nodejs,angularjs") (apache-mode . "apache") (nginx-mode . "nginx") (puppet-mode . "puppet")
+     (go-mode . "godoc,go") (python-mode . "python,tornado,django") (ruby-mode . "ruby,rubygems")
+     (sh-mode . "bash,manpages") (sql-mode . "psql") (terraform-mode . "terraform")))
  '(default-input-method "russian-computer")
  '(dired-auto-revert-buffer 'dired-directory-changed-p)
+ '(dired-free-space nil)
  '(dired-listing-switches "-alh")
  '(dired-omit-extensions '(".swp"))
  '(dired-omit-files
@@ -98,8 +89,8 @@
  '(package-selected-packages
    '(ag ansible apache-mode color-theme-sanityinc-solarized company company-ansible company-go company-terraform csv-mode
         dash-at-point dockerfile-mode emmet-mode exec-path-from-shell flx-ido flycheck go-mode haml-mode inf-ruby
-        js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile
-        puppet-mode terraform-mode whitespace-cleanup-mode yaml-mode yasnippet))
+        js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile puppet-mode terraform-mode
+        whitespace-cleanup-mode yaml-mode yasnippet))
  '(projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
  '(require-final-newline 'ask)
  '(ring-bell-function 'ignore)
