@@ -31,6 +31,7 @@
    '((java-mode . "java") (awk-mode . "awk") (other . "stroustrup")))
  '(column-number-mode t)
  '(company-idle-delay 0.25)
+ '(company-minimum-prefix-length 2)
  '(css-indent-offset 2)
  '(custom-safe-themes
    '("48d34b6afe72407ca494387c8bea495bb2deee96bd88516f302db1f11e1810a1" default))
@@ -73,15 +74,14 @@
  '(magit-push-always-verify nil)
  '(magit-revert-buffers t t)
  '(make-backup-files nil)
- '(markdown-command "redcarpet --parse fenced_code_blocks")
  '(package-archives
    '(("melpa" . "https://melpa.org/packages/") ("gnu" . "https://elpa.gnu.org/packages/")
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
-   '(ansible apache-mode color-theme-sanityinc-solarized company company-ansible company-go company-terraform csv-mode
-             dash-at-point dockerfile-mode emmet-mode exec-path-from-shell flx-ido flycheck go-mode haml-mode inf-ruby
-             js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile puppet-mode rg
-             terraform-mode whitespace-cleanup-mode yaml-mode yasnippet))
+   '(ansible apache-mode color-theme-sanityinc-solarized company csv-mode dash-at-point dockerfile-mode
+             exec-path-from-shell flx-ido flycheck git-modes go-mode haml-mode inf-ruby js2-mode json-mode magit
+             markdown-mode move-text nginx-mode php-mode projectile puppet-mode rg terraform-mode
+             whitespace-cleanup-mode yaml-mode))
  '(projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
  '(require-final-newline 'ask)
  '(ring-bell-function 'ignore)
@@ -119,7 +119,8 @@
 (global-set-key (kbd "s-w") 'kill-this-buffer)
 (global-set-key (kbd "s-o") 'find-file)
 
-(add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\)\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(?:service\\|socket\\|target\\|timer\\|cnf\\)\\'" . conf-mode))
+(add-to-list 'auto-mode-alist '("\\.zsh_history\\'" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\.plist\\'" . xml-mode))
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . java-mode))
 (add-to-list 'auto-mode-alist '("Jenkinsfile" . java-mode))
@@ -141,27 +142,24 @@
   (projectile-register-project-type 'ruby-rake '("Rakefile") :compile "rake" :test "rake test")
   (projectile-register-project-type 'make '("Makefile") :compile "make" :test "make test")
   (global-flycheck-mode t)
-  (yas-global-mode t)
 
   (add-hook 'prog-mode-hook 'company-mode)
   (add-hook 'prog-mode-hook 'whitespace-cleanup-mode)
-  (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt)
-
-  (add-hook 'html-mode-hook 'emmet-mode)
-  (add-hook 'css-mode-hook  'emmet-mode)
 
   (global-set-key "\C-cm" 'magit-status)
   (global-set-key "\C-cp" 'flycheck-list-errors)
   (global-set-key "\C-cd" 'dash-at-point)
 
   (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-  (add-to-list 'auto-mode-alist '("\\.scss\\'" . css-mode))
+  (add-to-list 'auto-mode-alist '("/.dockerignore\\'" . gitignore-mode))
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.js[hl]intrc\\'" . json-mode))
-  (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode)))
+  (add-to-list 'auto-mode-alist '("\\.kube/config\\'" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("\\.ebextensions/.*\\.config\\'" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
 
   (eval-after-load 'magit-remote
-    `(define-key magit-mode-map "f" 'magit-pull-and-fetch-popup))
+    `(define-key magit-mode-map "f" 'magit-pull-and-fetch-popup)))
 
 (provide 'init)
 ;;; init.el ends here
