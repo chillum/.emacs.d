@@ -48,7 +48,7 @@
  '(dired-listing-switches "-alh")
  '(dired-omit-extensions '(".swp"))
  '(dired-omit-files
-   "^\\.DS_Store$\\|^Thumbs\\.db$\\|^\\.CFUserTextEncoding$\\|^\\.localized$\\|^\\.git$\\|^\\.terraform$\\|^\\.$")
+   "^\\.DS_Store$\\|^Thumbs\\.db$\\|^\\.CFUserTextEncoding$\\|^\\.localized$\\|^\\.git$\\|^\\.terraform$\\|^\\.ruby-lsp$\\|^\\.$")
  '(dired-recursive-copies 'always)
  '(dired-recursive-deletes 'always)
  '(eshell-hist-ignoredups t)
@@ -79,9 +79,9 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
  '(package-selected-packages
    '(ansible apache-mode color-theme-sanityinc-solarized company csv-mode dash-at-point dockerfile-mode
-             exec-path-from-shell flx-ido flycheck git-modes go-mode haml-mode inf-ruby js2-mode json-mode magit
-             markdown-mode move-text nginx-mode php-mode projectile puppet-mode rg terraform-mode
-             whitespace-cleanup-mode yaml-mode))
+             exec-path-from-shell flx-ido flycheck git-modes go-mode go-template-helper-mode go-template-mode haml-mode
+             inf-ruby js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile puppet-mode rg
+             terraform-mode whitespace-cleanup-mode yaml-mode))
  '(projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
  '(require-final-newline 'ask)
  '(ring-bell-function 'ignore)
@@ -145,11 +145,13 @@
 
   (add-hook 'prog-mode-hook 'company-mode)
   (add-hook 'prog-mode-hook 'whitespace-cleanup-mode)
+  (add-hook 'yaml-mode-hook 'go-template-helper-mode)
 
   (global-set-key "\C-cm" 'magit-status)
   (global-set-key "\C-cp" 'flycheck-list-errors)
   (global-set-key "\C-cd" 'dash-at-point)
 
+  (add-to-list 'auto-mode-alist '("\\.ya?ml\\.\\(go\\)?tmpl\\'" . yaml-mode))
   (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
   (add-to-list 'auto-mode-alist '("/.dockerignore\\'" . gitignore-mode))
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
