@@ -169,7 +169,6 @@
 
   (add-hook 'prog-mode-hook 'company-mode)
   (add-hook 'prog-mode-hook 'whitespace-cleanup-mode)
-  (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
   (add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt)
 
   (add-hook 'html-mode-hook 'emmet-mode)
