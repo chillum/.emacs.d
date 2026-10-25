@@ -13,9 +13,6 @@
                 "-"
                 "12"))
 
-(if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
-    (tool-bar-mode 0))
-
 (if (eq system-type 'darwin)
     (setq trash-directory "~/.Trash"))
 
@@ -90,6 +87,7 @@
  '(show-paren-mode t)
  '(sql-product 'postgres)
  '(tab-width 4)
+ '(tool-bar-mode nil)
  '(tramp-default-method "ssh")
  '(web-mode-code-indent-offset 2)
  '(web-mode-css-indent-offset 2)
