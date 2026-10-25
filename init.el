@@ -104,7 +104,7 @@
    '(ag ansible apache-mode color-theme-sanityinc-solarized company company-ansible company-go company-terraform csv-mode
         dash-at-point dockerfile-mode emmet-mode exec-path-from-shell flx-ido flycheck go-mode haml-mode inf-ruby
         js2-mode json-mode magit markdown-mode move-text nginx-mode php-mode projectile
-        puppet-mode terraform-mode vagrant whitespace-cleanup-mode yaml-mode yasnippet))
+        puppet-mode terraform-mode whitespace-cleanup-mode yaml-mode yasnippet))
  '(projectile-mode-line '(:eval (format " [%s]" (projectile-project-name))))
  '(require-final-newline 'ask)
  '(ring-bell-function 'ignore)
