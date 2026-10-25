@@ -55,7 +55,7 @@
  '(dired-listing-switches "-alh")
  '(dired-omit-extensions '(".swp"))
  '(dired-omit-files
-   "^\\.DS_Store$\\|^Thumbs\\.db$\\|^\\.CFUserTextEncoding$\\|^\\.localized$\\|^\\.git$\\|^\\.vagrant$\\|^\\.#")
+   "^\\.DS_Store$\\|^Thumbs\\.db$\\|^\\.CFUserTextEncoding$\\|^\\.localized$\\|^\\.git$\\|^\\.terraform$\\|^\\.#")
  '(dired-recursive-copies 'always)
  '(dired-recursive-deletes 'always)
  '(eshell-hist-ignoredups t)
