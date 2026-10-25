@@ -109,7 +109,7 @@
 (setq apache-indent-level 2
       dired-omit-mode t)
 
-(add-hook 'dired-load-hook '(lambda () (require 'dired-x)))
+(add-hook 'dired-load-hook #'(lambda () (require 'dired-x)))
 
 (if (executable-find "aspell")
     (add-hook 'text-mode-hook 'flyspell-mode))
