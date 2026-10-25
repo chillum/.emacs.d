@@ -12,9 +12,7 @@
                     "Menlo"
                   "DejaVu Sans Mono")
                 "-"
-                (if (>= (display-pixel-height) 800)
-                    "12"
-                  "10.5")))
+                "12"))
 (setq default-frame-alist
       '((height . 54)
         (width . 170)
