@@ -16,15 +16,10 @@
                     "12"
                   "10.5")))
 (setq default-frame-alist
-      (if (>= (display-pixel-height) 800)
-          '((height . 53)
-            (width . 150)
-            (top . 0)
-            (left . 125))
-        '((height . 44)
-          (width . 120)
-          (top . 3)
-          (left . 220))))
+      '((height . 54)
+        (width . 170)
+        (top . 160)
+        (left . 475)))
 
 (if (fboundp 'tool-bar-mode) ;; Customize does not check if this exists
     (tool-bar-mode 0))
